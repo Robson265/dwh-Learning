@@ -1,0 +1,41 @@
+.contact-page { max-width: 1000px; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; color: #fff; }
+.contact-head { text-align: center; margin-bottom: 2.5rem; }
+.contact-head h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; margin: 0 0 .5rem; }
+.contact-head p { margin: 0 auto; max-width: 48ch; font-size: 1.1rem; opacity: .85; }
+
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; align-items: start; }
+
+.contact-info { display: grid; gap: 1rem; }
+.info-card, .contact-form {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 22px;
+  backdrop-filter: blur(8px);
+}
+.info-card { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.3rem; color: #fff; text-decoration: none; transition: transform .25s ease, background .25s ease; }
+a.info-card:hover { transform: translateY(-3px); background: rgba(255,255,255,.2); }
+.info-icon { flex: none; width: 48px; height: 48px; display: grid; place-items: center; font-size: 1.3rem; background: #FFD23F; border-radius: 14px; }
+.info-card h2 { margin: 0; font-size: 1rem; font-weight: 800; }
+.info-card p { margin: .1rem 0 0; opacity: .9; overflow-wrap: anywhere; }
+
+.whatsapp { display: block; text-align: center; padding: .9rem; border-radius: 999px; background: #25D366; color: #0E1330; font-weight: 800; text-decoration: none; }
+.whatsapp:hover { filter: brightness(1.08); }
+
+
+
+.contact-form { padding: 2.5rem; display: grid; gap: .5rem; align-content: center; }
+.contact-form h2 { margin: 0 0 .5rem; font-size: 1.3rem; font-weight: 800; }
+.contact-form label { font-weight: 700; font-size: .95rem; }
+.contact-form input, .contact-form textarea {
+  width: 100%; padding: .8rem .8rem; border-radius: 12px; border: 0;
+  font: inherit; color: #0E1330; background: #fff;
+}
+
+
+.contact-form input:focus-visible, .contact-form textarea:focus-visible, .whatsapp:focus-visible, .info-card:focus-visible, .contact-form button:focus-visible { outline: 3px solid #FFD23F; outline-offset: 3px; }
+.contact-form textarea { resize: vertical; }
+.contact-form button { margin-top: .6rem; border: 0; cursor: pointer; padding: .9rem; border-radius: 999px; background: #FFD23F; color: #0E1330; font-weight: 800; font-size: 1rem; }
+.contact-form button:hover { filter: brightness(1.08); }
+
+@media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .info-card { transition: none; } }

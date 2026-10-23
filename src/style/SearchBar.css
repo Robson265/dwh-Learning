@@ -1,0 +1,36 @@
+.auth-links {
+  grid-row: 1;                          /* first line */
+  justify-self: end;
+  display: flex; gap: .5rem;
+  pointer-events: auto;
+}
+
+.suggest {
+  position: absolute; top: calc(100% + .5rem); left: 0; right: 0;
+  margin: 0; padding: .4rem; list-style: none;
+  background: #fff; border-radius: 18px; box-shadow: 0 16px 36px rgba(10, 14, 36, .3);
+}
+.suggest button {
+  width: 100%; display: flex; justify-content: space-between; gap: 1rem;
+  padding: .7rem .9rem; border: 0; border-radius: 12px; background: transparent;
+  font: inherit; color: #0E1330; text-align: left; cursor: pointer;
+}
+.suggest button:hover, .suggest button:focus-visible { background: #EEF0FF; }
+.suggest small { flex: none; color: #566079; }
+.suggest .none { padding: .8rem .9rem; color: #566079; }
+
+.auth-links { grid-column: 3; justify-self: end; display: flex; gap: .5rem; pointer-events: auto; }
+.btn-login, .btn-register {
+  padding: .65rem 1.2rem; border-radius: 999px; font-weight: 800;
+  text-decoration: none; white-space: nowrap;
+}
+.btn-login { background: #0E1330; color: #fff; }
+.btn-register { background: #FFD23F; color: #0E1330; }
+.btn-login:hover, .btn-register:hover { filter: brightness(1.12); }
+.btn-login:focus-visible, .btn-register:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+@media (max-width: 800px) {
+  .topbar { grid-template-columns: 1fr; }
+  .auth-links { grid-column: 1; grid-row: 1; }
+  .topbar .search { grid-column: 1; grid-row: 2; }
+}

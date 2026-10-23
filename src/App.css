@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+body {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 0;  
+    font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+nav {
+    display: flex;
+  justify-content: space-between;               /* was space-evenly: left group, right group */
+  border-bottom: 1px solid rgba(255, 255, 255, .15);   /* thin line under the bar like the reference */
+  padding: 12px 24px;
+  border-radius: 0;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;                          /* vertically centers Dashboard with the logo */
+}
+.nav-left { gap: 2.5rem; }                      /* space between logo and "Dashboard" */
+.nav-right { gap: .75rem; }
+
+.nav-title {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 500;
+  opacity: .9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.logo img {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
 }
